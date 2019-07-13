@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => new TopPage(),
         '/reason': (BuildContext context) => new ReasonPage(),
-        '/duel': (BuildContext context) => null,
+        '/duel': (BuildContext context) => new DuelPage(),
         '/solve': (BuildContext context) => null,
         '/complete': (BuildContext context) => new CompletePage(),
       }
