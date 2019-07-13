@@ -37,15 +37,9 @@ class MyHomePageState extends State<ReasonPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    'Reason:',
-                    style: TextStyle(fontSize: 40.0),
-                  ),
                   TextFormField(
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.green),
-                      ),
+                      hintText: 'Reason',
                     ),
                   ),
                 ],
@@ -59,7 +53,6 @@ class MyHomePageState extends State<ReasonPage> {
                   RaisedButton(
                     onPressed: () => Navigator.of(context).pop(),
                     color: Colors.white,
-                    padding: EdgeInsetsDirectional.only(start: 20.0, end: 20.0),
                     child: Text(
                       'Top',
                       style: TextStyle(
@@ -71,7 +64,6 @@ class MyHomePageState extends State<ReasonPage> {
                   RaisedButton(
                     onPressed: () => Navigator.of(context).pushNamed('/duel'),
                     color: Colors.red,
-                    padding: EdgeInsetsDirectional.only(start: 20.0, end: 20.0),
                     child: Text(
                       'Buttle',
                       style: TextStyle(
