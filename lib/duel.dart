@@ -38,38 +38,59 @@ class MyHomePageState extends State<DuelPage> {
   }
 
   Widget build(BuildContext context) {
-    /*return Scaffold(
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spac,
-          children: <Widget>[
-            Align(
-                alignment: Alignment.centerLeft,
-                child: Transform.rotate(
-                    angle: 90, child: count == 0 ? _showBtn() : Text(''))),
-            Align(alignment: Alignment.center, child: Text('山札')),
-            Align(
-                alignment: Alignment.centerRight,
-                child: Transform.rotate(
-                    angle: 90, child: count == 1 ? _showBtn() : Text('')))
-          ],
-        ),
-      ),
-    );*/
     return Scaffold(
         body: Stack(children: <Widget>[
+      Align(
+        alignment: Alignment.topCenter,
+        child: Text('2:00'),
+      ),
       Align(
           alignment: Alignment.centerLeft,
           child: Transform.rotate(
               angle: pi / 2, child: count == 0 ? _showBtn() : null)),
-      Align(
-        alignment: Alignment.center,
-        child: Text('山札'),
+      Center(
+        child: GestureDetector(
+            onTap: () {
+              showDialog<bool>(
+    context: context,
+    builder: (BuildContext context) {
+      return new AlertDialog(
+        content: const Text('ここにカードを表示'),
+        actions: <Widget>[
+          new FlatButton(
+            child: const Text('閉じる'),
+            onPressed: () {
+              Navigator.of(context).pop(false);
+            },
+          ),
+        ],
+      );
+    },
+  );
+            },
+            child: Container(
+              height: 120,
+              width: 120,
+              color: Colors.white,
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  '山札',
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            )),
       ),
       Align(
           alignment: Alignment.centerRight,
           child: Transform.rotate(
-              angle: pi / -2, child: count == 1 ? _showBtn() : null))
+              angle: pi / -2, child: count == 1 ? _showBtn() : null)),
+      Align(
+        alignment: Alignment.bottomCenter,
+        child: Text('山札を引いて下さい'),
+      ),
     ]));
   }
 
