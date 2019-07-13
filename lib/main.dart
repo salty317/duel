@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           '/reason': (BuildContext context) => null,
           '/duel': (BuildContext context) => null,
           '/solve': (BuildContext context) => null,
-          'complete': (BuildContext context) => null,
+          '/complete': (BuildContext context) => new CompletePage(),
         });
   }
 }
