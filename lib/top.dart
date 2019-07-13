@@ -41,7 +41,7 @@ class _MyHomePageState extends State<TopPage> {
               child: Text(
                 'Standby',
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 40.0,
                   color: Colors.black,
                 ),
               ),
