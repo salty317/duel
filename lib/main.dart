@@ -11,17 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Duel',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        initialRoute: '/',
-        routes: <String, WidgetBuilder>{
-          '/': (BuildContext context) => new TopPage(),
-          '/reason': (BuildContext context) => null,
-          '/duel': (BuildContext context) => null,
-          '/solve': (BuildContext context) => null,
-          '/complete': (BuildContext context) => new CompletePage(),
-        });
+      title: 'Duel',
+      theme: new ThemeData.dark(),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => new TopPage(),
+        '/reason': (BuildContext context) => null,
+        '/duel': (BuildContext context) => null,
+        '/solve': (BuildContext context) => null,
+        '/complete': (BuildContext context) => new CompletePage(),
+      }
+    );
   }
 }

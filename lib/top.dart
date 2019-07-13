@@ -33,11 +33,18 @@ class _MyHomePageState extends State<TopPage> {
           children: <Widget>[
             Text(
               'Duel',
-              style: TextStyle(fontSize: 50.0),
+              style: TextStyle(fontSize: 80.0),
             ),
             RaisedButton(
+              color: Colors.white,
               onPressed: () => Navigator.of(context).pushNamed('/reason'),
-              child: Text('始める'),
+              child: Text(
+                'Standby',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black,
+                ),
+              ),
             )
           ],
         ),
