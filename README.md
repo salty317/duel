@@ -1,5 +1,5 @@
 # Duel
-Card game to solve Quarrel 🖕( ◠‿◠ )🖕
+Card game to solve **QUARREL** 🖕( ◠‿◠ )🖕
 
 ## Setup
 
