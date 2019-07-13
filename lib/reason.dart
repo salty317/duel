@@ -38,8 +38,8 @@ class MyHomePageState extends State<ReasonPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    '喧嘩の原因',
-                    style: TextStyle(fontSize: 50.0),
+                    'Reason:',
+                    style: TextStyle(fontSize: 40.0),
                   ),
                   TextFormField(
                     decoration: InputDecoration(
@@ -58,15 +58,26 @@ class MyHomePageState extends State<ReasonPage> {
                 children: <Widget>[
                   RaisedButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    color: Colors.grey,
+                    color: Colors.white,
                     padding: EdgeInsetsDirectional.only(start: 20.0, end: 20.0),
-                    child: Text('トップへ戻る'),
+                    child: Text(
+                      'Top',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                   RaisedButton(
                     onPressed: () => Navigator.of(context).pushNamed('/duel'),
                     color: Colors.red,
                     padding: EdgeInsetsDirectional.only(start: 20.0, end: 20.0),
-                    child: Text('バトる'),
+                    child: Text(
+                      'Buttle',
+                      style: TextStyle(
+                        fontSize: 30.0,
+                      )
+                    ),
                   ),
                 ],
               ),
